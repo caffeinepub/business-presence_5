@@ -29,7 +29,7 @@ const initialAddress: AddressForm = {
 
 type Step = 'address' | 'payment' | 'success';
 
-const UPI_ID = 'arpan@upi';
+const UPI_ID = '6294577453@ybl';
 
 export default function CheckoutModal({
   isOpen,

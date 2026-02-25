@@ -38,22 +38,30 @@ export default function Hero({ onCtaClick }: HeroProps) {
 
         {/* Tagline */}
         <p
-          className="font-display text-2xl md:text-3xl italic font-normal text-white/95 mb-8 animate-fade-up tracking-wide"
+          className="font-display text-2xl md:text-3xl italic font-normal text-white/95 mb-4 animate-fade-up tracking-wide"
           style={{ animationDelay: '0.18s' }}
         >
           ✦ Glow Your Beautiful Moments ✦
         </p>
 
+        {/* Creator tagline */}
+        <p
+          className="font-body text-base md:text-lg font-medium text-white/80 mb-6 animate-fade-up tracking-wide"
+          style={{ animationDelay: '0.22s' }}
+        >
+          Handcrafted candles made with love by <span className="text-white font-semibold">Arpan Ghosh</span>
+        </p>
+
         <p
           className="font-body text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up"
-          style={{ animationDelay: '0.2s' }}
+          style={{ animationDelay: '0.28s' }}
         >
           Every candle is lovingly hand-poured with premium wax and natural fragrances —
           crafted to make your special moments shine brighter.
         </p>
         <div
           className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up"
-          style={{ animationDelay: '0.3s' }}
+          style={{ animationDelay: '0.35s' }}
         >
           <button
             onClick={onCtaClick}

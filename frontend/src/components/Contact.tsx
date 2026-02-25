@@ -16,9 +16,10 @@ const initialForm: FormState = { name: '', email: '', message: '' };
 
 const OWNER = {
   name: 'Arpan Ghosh',
-  phone: '8617376874',
+  phone: '6294577453',
+  altPhone: '8617376874',
   email: 'arpanghosh232@gmail.com',
-  whatsapp: 'https://wa.me/918617376874',
+  whatsapp: 'https://wa.me/916294577453',
   instagram: 'https://www.instagram.com/babaikhushi_0305',
   facebook: 'https://www.facebook.com/share/1CxeHPxYJv/',
   location: 'Diamond Harbour, Falta',
@@ -97,11 +98,11 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <Phone size={16} className="text-accent" />
                 </div>
-                <div className="flex flex-col gap-0.5">
+                <div className="flex flex-col gap-1">
                   <span className="font-body text-xs font-semibold tracking-widest uppercase text-muted-foreground">
                     Phone
                   </span>
@@ -111,6 +112,15 @@ export default function Contact() {
                   >
                     +91 {OWNER.phone}
                   </a>
+                  <div className="flex items-center gap-1.5">
+                    <span className="font-body text-xs text-muted-foreground">Alt:</span>
+                    <a
+                      href={`tel:+91${OWNER.altPhone}`}
+                      className="font-body text-sm text-foreground hover:text-accent transition-colors"
+                    >
+                      +91 {OWNER.altPhone}
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -156,143 +166,117 @@ export default function Contact() {
             </a>
 
             {/* Social links */}
-            <div>
-              <p className="font-body text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
-                Follow Us
-              </p>
-              <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
+              {[
+                { Icon: SiInstagram, label: 'Instagram', href: OWNER.instagram },
+                { Icon: SiFacebook, label: 'Facebook', href: OWNER.facebook },
+              ].map(({ Icon, label, href }) => (
                 <a
-                  href={OWNER.instagram}
+                  key={label}
+                  href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm font-body text-foreground hover:bg-secondary hover:border-accent transition-colors"
+                  aria-label={label}
+                  className="w-9 h-9 rounded-full bg-accent/10 hover:bg-accent/20 flex items-center justify-center transition-colors duration-200 text-accent"
                 >
-                  <SiInstagram size={15} className="text-accent" />
-                  Instagram
+                  <Icon size={16} />
                 </a>
-                <a
-                  href={OWNER.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm font-body text-foreground hover:bg-secondary hover:border-accent transition-colors"
-                >
-                  <SiFacebook size={15} className="text-accent" />
-                  Facebook
-                </a>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* Right: form */}
-          <div className="bg-card rounded-xl border border-border shadow-card p-8 md:p-10">
-            {mutation.isSuccess ? (
-              <div className="flex flex-col items-center justify-center text-center py-10 gap-4">
-                <CheckCircle className="w-14 h-14 text-accent" strokeWidth={1.5} />
-                <h3 className="font-display text-2xl font-semibold text-foreground">
-                  Message Sent!
-                </h3>
-                <p className="font-body text-muted-foreground text-sm max-w-xs">
-                  Thank you for reaching out. We'll get back to you as soon as possible.
-                </p>
-                <button
-                  onClick={() => mutation.reset()}
-                  className="mt-4 px-6 py-2.5 rounded-full border border-border text-sm font-body font-medium text-foreground hover:bg-secondary transition-colors"
-                >
-                  Send Another Message
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} noValidate className="space-y-6">
-                <div className="space-y-1.5">
-                  <Label htmlFor="name" className="font-body text-sm font-medium text-foreground">
-                    Full Name
-                  </Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Your name"
-                    value={form.name}
-                    onChange={handleChange}
-                    disabled={mutation.isPending}
-                    className={`font-body bg-background ${errors.name ? 'border-destructive focus-visible:ring-destructive' : ''}`}
-                  />
-                  {errors.name && (
-                    <p className="font-body text-xs text-destructive flex items-center gap-1 mt-1">
-                      <AlertCircle size={12} /> {errors.name}
-                    </p>
-                  )}
-                </div>
-
-                <div className="space-y-1.5">
-                  <Label htmlFor="email" className="font-body text-sm font-medium text-foreground">
-                    Email Address
-                  </Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="you@example.com"
-                    value={form.email}
-                    onChange={handleChange}
-                    disabled={mutation.isPending}
-                    className={`font-body bg-background ${errors.email ? 'border-destructive focus-visible:ring-destructive' : ''}`}
-                  />
-                  {errors.email && (
-                    <p className="font-body text-xs text-destructive flex items-center gap-1 mt-1">
-                      <AlertCircle size={12} /> {errors.email}
-                    </p>
-                  )}
-                </div>
-
-                <div className="space-y-1.5">
-                  <Label htmlFor="message" className="font-body text-sm font-medium text-foreground">
-                    Message
-                  </Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="Tell us what you'd like to order or ask us anything..."
-                    value={form.message}
-                    onChange={handleChange}
-                    disabled={mutation.isPending}
-                    rows={5}
-                    className={`font-body bg-background resize-none ${errors.message ? 'border-destructive focus-visible:ring-destructive' : ''}`}
-                  />
-                  {errors.message && (
-                    <p className="font-body text-xs text-destructive flex items-center gap-1 mt-1">
-                      <AlertCircle size={12} /> {errors.message}
-                    </p>
-                  )}
-                </div>
-
-                {mutation.isError && (
-                  <div className="flex items-center gap-2 p-3 rounded-md bg-destructive/10 border border-destructive/20">
-                    <AlertCircle size={16} className="text-destructive flex-shrink-0" />
-                    <p className="font-body text-sm text-destructive">
-                      Something went wrong. Please try again.
-                    </p>
-                  </div>
+          {/* Right: contact form */}
+          <div>
+            <form onSubmit={handleSubmit} noValidate className="space-y-5">
+              <div className="space-y-1.5">
+                <Label htmlFor="name" className="font-body text-sm font-medium text-foreground">
+                  Your Name *
+                </Label>
+                <Input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Full name"
+                  value={form.name}
+                  onChange={handleChange}
+                  className={`font-body bg-background ${errors.name ? 'border-destructive' : ''}`}
+                />
+                {errors.name && (
+                  <p className="font-body text-xs text-destructive flex items-center gap-1">
+                    <AlertCircle size={11} /> {errors.name}
+                  </p>
                 )}
+              </div>
 
-                <button
-                  type="submit"
-                  disabled={mutation.isPending}
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-accent text-accent-foreground font-body font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-60 disabled:cursor-not-allowed"
-                >
-                  {mutation.isPending ? (
-                    <>
-                      <Loader2 size={16} className="animate-spin" />
-                      Sending…
-                    </>
-                  ) : (
-                    'Send Message'
-                  )}
-                </button>
-              </form>
-            )}
+              <div className="space-y-1.5">
+                <Label htmlFor="email" className="font-body text-sm font-medium text-foreground">
+                  Email Address *
+                </Label>
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  value={form.email}
+                  onChange={handleChange}
+                  className={`font-body bg-background ${errors.email ? 'border-destructive' : ''}`}
+                />
+                {errors.email && (
+                  <p className="font-body text-xs text-destructive flex items-center gap-1">
+                    <AlertCircle size={11} /> {errors.email}
+                  </p>
+                )}
+              </div>
+
+              <div className="space-y-1.5">
+                <Label htmlFor="message" className="font-body text-sm font-medium text-foreground">
+                  Message *
+                </Label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us what you'd like to order or ask..."
+                  rows={5}
+                  value={form.message}
+                  onChange={handleChange}
+                  className={`font-body bg-background resize-none ${errors.message ? 'border-destructive' : ''}`}
+                />
+                {errors.message && (
+                  <p className="font-body text-xs text-destructive flex items-center gap-1">
+                    <AlertCircle size={11} /> {errors.message}
+                  </p>
+                )}
+              </div>
+
+              {mutation.isSuccess && (
+                <div className="flex items-center gap-2 p-3 bg-accent/10 rounded-lg text-accent font-body text-sm">
+                  <CheckCircle size={16} />
+                  Message sent! We'll get back to you soon.
+                </div>
+              )}
+
+              {mutation.isError && (
+                <div className="flex items-center gap-2 p-3 bg-destructive/10 rounded-lg text-destructive font-body text-sm">
+                  <AlertCircle size={16} />
+                  Something went wrong. Please try again.
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={mutation.isPending}
+                className="w-full py-3 rounded-full bg-accent text-accent-foreground font-body font-semibold text-sm hover:opacity-90 active:scale-95 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              >
+                {mutation.isPending ? (
+                  <>
+                    <Loader2 size={16} className="animate-spin" />
+                    Sending…
+                  </>
+                ) : (
+                  'Send Message'
+                )}
+              </button>
+            </form>
           </div>
         </div>
       </div>

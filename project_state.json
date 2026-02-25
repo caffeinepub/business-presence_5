@@ -1,103 +1,43 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "E-commerce candle shop project with Place Order, Add to Cart, Wishlist, customer address, UPI-only payment, and business details (Home: Diamond Harbour, Falta; Contact: +918617376874; About: 'It Is My Dream Business'; Service: 'Glow Your Beautiful Moments').",
+  "summary": "Handcrafted candle shop for Arpan Ghosh with features: Place Order, Add to Cart, Wishlist, UPI payment (6294577453@ybl), customer address, business details, contact numbers (6294577453, 8617376874).",
   "architectural_notes": [
-    "Payment method restricted to UPI only",
-    "Business info: Location - Diamond Harbour, Falta; Contact - +918617376874; Service - 'Glow Your Beautiful Moments'"
+    "Business: Handcrafted candles made with love by Arpan Ghosh",
+    "Primary contact: 6294577453, Alternative: 8617376874",
+    "UPI payment ID: 6294577453@ybl"
   ],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-below-the-price-of-each-candle-product-card-in-the-services-products-section-add-three-action-elements-a-place-order-button-an-add-to-cart-button-and-a-wishlist-heart-icon-button-all-three-should-be-visually-styled-to-match-the-warm-terracotta-sand-theme-of-the-shop",
-      "title": "Below the price of each candle product card in the Services/Products section, add three action elements: a 'Place Order' button, an 'Add to Cart' button, and a Wishlist heart icon button. All three should be visually styled to match the warm terracotta/sand theme of the shop.",
+      "id": "feature-update-the-site-tagline-description-to-handcrafted-candles-made-with-love-by-arpan-ghosh-wherever-brand-copy-or-taglines-appear-hero-section-about-section-footer",
+      "title": "Update the site tagline/description to 'Handcrafted candles made with love by Arpan Ghosh' wherever brand copy or taglines appear (Hero section, About section, Footer).",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-add-a-cart-area-slide-out-drawer-or-dedicated-section-that-lists-items-added-via-add-to-cart-it-should-display-product-name-price-quantity-controls-and-a-subtotal-cart-state-should-be-managed-in-react-state",
-      "title": "Add a Cart area (slide-out drawer or dedicated section) that lists items added via 'Add to Cart'. It should display product name, price, quantity controls, and a subtotal. Cart state should be managed in React state.",
+      "id": "feature-update-the-primary-contact-number-to-6294577453-and-add-the-alternative-contact-number-8617376874-in-the-contact-section-footer-and-any-other-location-where-contact-details-are-displayed",
+      "title": "Update the primary contact number to 6294577453 and add the alternative contact number 8617376874 in the Contact section, Footer, and any other location where contact details are displayed.",
       "reqIds": [
         "REQ-2"
       ],
       "version": 1
     },
     {
-      "id": "feature-add-a-wishlist-area-dedicated-section-or-slide-out-panel-that-lists-items-saved-via-the-wishlist-heart-icon-on-product-cards-wishlist-state-should-be-managed-in-react-state",
-      "title": "Add a Wishlist area (dedicated section or slide-out panel) that lists items saved via the Wishlist heart icon on product cards. Wishlist state should be managed in React state.",
+      "id": "feature-update-the-upi-payment-id-to-6294577453-ybl-in-the-checkoutmodal-payment-step-and-anywhere-else-upi-payment-details-are-shown",
+      "title": "Update the UPI payment ID to '6294577453@ybl' in the CheckoutModal payment step and anywhere else UPI payment details are shown.",
       "reqIds": [
         "REQ-3"
       ],
       "version": 1
-    },
-    {
-      "id": "feature-add-a-customer-address-input-section-in-the-checkout-order-flow-triggered-by-place-order-the-form-should-collect-full-name-street-address-city-town-pin-code-and-phone-number",
-      "title": "Add a Customer Address input section in the checkout/order flow (triggered by 'Place Order'). The form should collect: full name, street address, city/town, PIN code, and phone number.",
-      "reqIds": [
-        "REQ-4"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-in-the-order-checkout-flow-offer-only-upi-as-the-payment-method-display-a-upi-payment-option-with-a-upi-id-or-qr-code-placeholder-no-other-payment-methods-cash-card-etc-should-be-shown",
-      "title": "In the order/checkout flow, offer only UPI as the payment method. Display a UPI payment option with a UPI ID or QR code placeholder. No other payment methods (cash, card, etc.) should be shown.",
-      "reqIds": [
-        "REQ-5"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-about-section-text-to-read-it-is-my-dream-business-update-the-home-location-detail-displayed-on-the-site-footer-contact-or-about-to-show-diamond-harbour-falta-update-the-contact-phone-number-to-91-86173-76874-update-the-service-tagline-to-glow-your-beautiful-moments",
-      "title": "Update the About section text to read: 'It Is My Dream Business'. Update the home/location detail displayed on the site (footer, contact, or about) to show: 'Diamond Harbour, Falta'. Update the contact phone number to '+91 86173 76874'. Update the service tagline to 'Glow Your Beautiful Moments'.",
-      "reqIds": [
-        "REQ-6"
-      ],
-      "version": 1
     }
   ],
-  "new_feature_requests": [
-    {
-      "id": "AR-1",
-      "summary": "Place Order button below price",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-2",
-      "summary": "Add to Cart button and cart area",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-3",
-      "summary": "Wishlist icon and Wishlist area",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-4",
-      "summary": "Customer address input section",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-5",
-      "summary": "UPI-only payment option",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-6",
-      "summary": "Business details: Home (Diamond Harbour, Falta), About, Contact (+918617376874), Service tagline",
-      "reqIds": [],
-      "status": "pending"
-    }
-  ],
+  "new_feature_requests": [],
   "gameProjectType": "none",
-  "projectName": "Glow Your Beautiful Moments Candle Shop",
+  "projectName": "Arpan Ghosh Candle Shop",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

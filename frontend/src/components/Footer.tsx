@@ -27,7 +27,7 @@ export default function Footer() {
               <span className="font-display font-semibold text-lg">Melt &amp; Glow</span>
             </div>
             <p className="font-body text-sm text-primary-foreground/60 leading-relaxed max-w-xs mb-1">
-              Handcrafted candles made with love. It Is My Dream Business.
+              Handcrafted candles made with love by Arpan Ghosh.
             </p>
             <p className="font-display text-sm italic text-primary-foreground/50 mb-5">
               ✦ Glow Your Beautiful Moments ✦
@@ -37,7 +37,7 @@ export default function Footer() {
                 {
                   Icon: SiWhatsapp,
                   label: 'WhatsApp',
-                  href: 'https://wa.me/918617376874',
+                  href: 'https://wa.me/916294577453',
                 },
                 {
                   Icon: SiInstagram,
@@ -101,10 +101,16 @@ export default function Footer() {
               <li>
                 <span className="block text-primary-foreground/40 text-xs uppercase tracking-wider mb-0.5">Phone</span>
                 <a
-                  href="tel:+918617376874"
-                  className="hover:text-primary-foreground transition-colors"
+                  href="tel:+916294577453"
+                  className="hover:text-primary-foreground transition-colors block"
                 >
-                  +91 86173 76874
+                  +91 62945 77453
+                </a>
+                <a
+                  href="tel:+918617376874"
+                  className="hover:text-primary-foreground transition-colors block text-primary-foreground/50 text-xs mt-0.5"
+                >
+                  Alt: +91 86173 76874
                 </a>
               </li>
               <li>

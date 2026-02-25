@@ -20,12 +20,13 @@ export default function About() {
               It Is My Dream Business
             </h2>
             <p className="font-body text-base text-muted-foreground leading-relaxed mb-5">
+              Handcrafted candles made with love by <strong className="text-foreground">Arpan Ghosh</strong> —
               Melt &amp; Glow was born from a deep passion for handcrafted beauty and the
               warmth that a single candle can bring to any space. Every candle we create
               is a piece of that dream — made with love, care, and the finest ingredients.
             </p>
             <p className="font-body text-base text-muted-foreground leading-relaxed mb-8">
-              Based in Diamond Harbour, Falta, we pour our heart into every product,
+              Based in Diamond Harbour, Falta, Arpan pours his heart into every product,
               believing that the right candle can transform an ordinary moment into
               something truly magical. This is more than a business — it's a calling.
             </p>

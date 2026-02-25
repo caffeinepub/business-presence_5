@@ -1,163 +1,66 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add Place Order, Add to Cart, Wishlist, Customer Address, UPI Payment & Business Details",
+  "title": "Update business details: tagline, contact numbers, and UPI payment ID",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Add Place Order, Add to Cart, and Wishlist buttons to each product card below the price, styled with the warm terracotta/sand theme",
+      "summary": "Update the site tagline to 'Handcrafted candles made with love by Arpan Ghosh' in Hero, About, and Footer sections",
       "acceptanceCriteria": [
-        "Each product card displays a 'Place Order' button directly below the price",
-        "Each product card displays an 'Add to Cart' button below the price",
-        "Each product card displays a Wishlist heart icon button",
-        "All three elements are consistently styled with the site's warm color theme"
+        "The phrase 'Handcrafted candles made with love by Arpan Ghosh' is visible in the Hero section tagline or subtitle.",
+        "The About section and Footer reflect the updated brand copy referencing Arpan Ghosh."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Services.tsx",
+          "path": "frontend/src/components/Hero.tsx",
           "operation": "modify",
-          "description": "Replace the WhatsApp-only order button with three action elements below the price: a 'Place Order' button, an 'Add to Cart' button, and a Wishlist heart icon button. Style all three consistently with the warm terracotta theme using the existing color variables (--color-primary, --color-accent). Wire the 'Add to Cart' button to call an addToCart handler that will be passed as a prop. Wire the heart icon to call an addToWishlist handler. Wire 'Place Order' to call an openCheckout handler. All handlers will be provided by the parent component via props."
+          "description": "Update the tagline or subtitle text to display 'Handcrafted candles made with love by Arpan Ghosh' in place of the current brand description."
         },
         {
-          "path": "frontend/src/App.tsx",
+          "path": "frontend/src/components/About.tsx",
           "operation": "modify",
-          "description": "Add React state for cart (array of items with product, quantity) and wishlist (array of products). Create handlers: addToCart(product), addToWishlist(product), toggleWishlist(productId), openCheckout(product). Pass these handlers and the wishlist state to the Services component as props so product cards can use them. Initialize state at the top of the App component using useState."
+          "description": "Update the brand story copy to include 'Handcrafted candles made with love by Arpan Ghosh' in the description text, ensuring it references Arpan Ghosh as the creator."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Update the tagline text in the footer to display 'Handcrafted candles made with love by Arpan Ghosh'."
         }
       ]
     },
     {
       "id": "REQ-2",
-      "summary": "Add a Cart slide-out drawer displaying added items with name, price, quantity controls, and subtotal",
+      "summary": "Update contact numbers to primary 6294577453 and alternative 8617376874 in Contact and Footer sections with clickable tel: links",
       "acceptanceCriteria": [
-        "Clicking 'Add to Cart' on a product adds it to the cart area",
-        "Cart area shows product name, price, and quantity",
-        "Cart area shows a subtotal",
-        "Cart can be opened/closed by the user",
-        "Items can be removed from the cart"
+        "Primary phone number 6294577453 is displayed in the Contact section and Footer.",
+        "Alternative phone number 8617376874 is displayed alongside the primary number in the Contact section and Footer.",
+        "Both numbers are clickable tel: links on mobile."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Cart.tsx",
-          "operation": "create",
-          "description": "Create a Cart component that renders as a slide-out drawer from the right side of the screen. Accept props: isOpen (boolean), onClose (function), items (array of cart items with product object and quantity), onUpdateQuantity (function to change item quantity), onRemoveItem (function to remove an item), and onCheckout (function to proceed to checkout). Display each item with product name, price, quantity controls (- and + buttons), and a remove button. Show a subtotal at the bottom calculated from all items. Include a 'Proceed to Checkout' button that calls onCheckout. Style with the warm theme colors. Use a fixed overlay and transform transition for the slide-out effect."
+          "path": "frontend/src/components/Contact.tsx",
+          "operation": "modify",
+          "description": "Update the phone number display to show primary contact 6294577453 and alternative contact 8617376874. Wrap both numbers in clickable <a href='tel:...'> links for mobile compatibility."
         },
         {
-          "path": "frontend/src/App.tsx",
+          "path": "frontend/src/components/Footer.tsx",
           "operation": "modify",
-          "description": "Add state for cart visibility (isCartOpen). Add handlers: openCart, closeCart, updateCartQuantity(productId, newQuantity), removeFromCart(productId), and proceedToCheckout. Wire the Cart component into the layout with these handlers. Add a cart icon button to the Navigation component (pass openCart and cart item count as props). Ensure cart state updates trigger re-renders of both Cart and Navigation components."
-        },
-        {
-          "path": "frontend/src/components/Navigation.tsx",
-          "operation": "modify",
-          "description": "Add a cart icon button to the navigation bar (desktop and mobile) that displays the number of items in the cart as a badge. Accept cartItemCount and onCartClick as props. Position the cart icon to the right of existing CTA button on desktop and in the mobile menu. Style the badge with a small circle using the accent color."
+          "description": "Update the owner contact details to display primary phone 6294577453 and alternative phone 8617376874. Ensure both are wrapped in <a href='tel:...'> anchor tags for mobile tap-to-call functionality."
         }
       ]
     },
     {
       "id": "REQ-3",
-      "summary": "Add a Wishlist slide-out panel displaying saved items with name and price, with heart icon toggle on product cards",
+      "summary": "Update UPI payment ID to '6294577453@ybl' in CheckoutModal payment step",
       "acceptanceCriteria": [
-        "Clicking the heart icon on a product adds it to the Wishlist area",
-        "Wishlist area displays saved products with name and price",
-        "Heart icon toggles filled/unfilled to reflect wishlist status",
-        "Items can be removed from the wishlist"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Wishlist.tsx",
-          "operation": "create",
-          "description": "Create a Wishlist component that renders as a slide-out panel from the right side (or top on mobile). Accept props: isOpen (boolean), onClose (function), items (array of wishlist product objects), and onRemoveItem (function). Display each wishlist item with product name, price, and a remove button. Include an empty state message when no items are saved. Style consistently with the Cart drawer using warm theme colors and a similar slide-out transition."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Add state for wishlist visibility (isWishlistOpen). Add handlers: openWishlist, closeWishlist, removeFromWishlist(productId). Wire the Wishlist component into the layout with these handlers. Add a wishlist icon button to the Navigation component (pass openWishlist and wishlist item count as props). Update the toggleWishlist handler to check if the product is already in the wishlist and add or remove accordingly."
-        },
-        {
-          "path": "frontend/src/components/Navigation.tsx",
-          "operation": "modify",
-          "description": "Add a wishlist heart icon button to the navigation bar (desktop and mobile) that displays the number of saved items as a badge. Accept wishlistItemCount and onWishlistClick as props. Position the wishlist icon between the existing CTA and cart icon. Style the badge similarly to the cart badge."
-        },
-        {
-          "path": "frontend/src/components/Services.tsx",
-          "operation": "modify",
-          "description": "Update the heart icon button to reflect wishlist status: render a filled heart if the product is in the wishlist array, unfilled otherwise. Accept the wishlist array as a prop and check product.id against it. Use conditional rendering or CSS classes to toggle the heart appearance."
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Add a Customer Address form in the checkout flow triggered by 'Place Order', collecting name, address, city, PIN code, and phone number",
-      "acceptanceCriteria": [
-        "Clicking 'Place Order' opens a modal or section with an address form",
-        "Form fields include: full name, street address, city/town, PIN code, and phone number",
-        "All fields are validated before submission",
-        "Form is styled consistently with the site theme"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/CheckoutModal.tsx",
-          "operation": "create",
-          "description": "Create a CheckoutModal component that renders a modal overlay containing a multi-step checkout flow. Accept props: isOpen (boolean), onClose (function), orderItem (product object or cart items array), and onOrderComplete (function). The first step displays a customer address form with fields: fullName, streetAddress, city, pinCode, phoneNumber. Validate all fields (required, phoneNumber format, pinCode numeric). Style the modal with the warm theme colors and include a 'Continue to Payment' button that advances to the payment step when the form is valid. Store form data in local component state."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Add state for checkout modal visibility (isCheckoutOpen) and current order item (checkoutItem). Update openCheckout handler to set checkoutItem (either a single product from 'Place Order' or all cart items from 'Proceed to Checkout') and open the modal. Update proceedToCheckout to pass cart items to openCheckout. Wire the CheckoutModal component into the layout with isCheckoutOpen, closeCheckout handler, checkoutItem, and an onOrderComplete handler that will be defined later."
-        }
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "summary": "Display UPI-only payment option with UPI ID or QR code placeholder in the checkout flow",
-      "acceptanceCriteria": [
-        "Payment section shows only UPI as the payment method",
-        "No card or cash-on-delivery options are present",
-        "UPI section includes a label and a placeholder UPI ID or QR code area",
-        "Payment section is shown after the address form in the order flow"
+        "The CheckoutModal payment step displays the UPI ID '6294577453@ybl'.",
+        "No other/old UPI ID remains visible in the application."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/CheckoutModal.tsx",
           "operation": "modify",
-          "description": "Add a second step to the CheckoutModal for payment after the address form is submitted. Display a UPI payment section with a heading 'Payment Method: UPI Only', a placeholder UPI ID (e.g., 'arpan@upi'), and a QR code placeholder (a square div or image placeholder styled with the theme). Use the qr-code component to render a QR code encoding the UPI ID for payment (verify the component's usage instructions before implementing). Include an order summary showing the product(s), total amount, and delivery address. Add a 'Confirm Order' button that calls onOrderComplete and closes the modal. Do not include any other payment methods."
-        }
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "summary": "Update business details: About text to 'It Is My Dream Business', location to 'Diamond Harbour, Falta', contact to '+91 86173 76874', and service tagline to 'Glow Your Beautiful Moments'",
-      "acceptanceCriteria": [
-        "About section includes the text 'It Is My Dream Business'",
-        "Location 'Diamond Harbour, Falta' is displayed in the footer and/or contact section",
-        "Contact phone number shows '+91 86173 76874' in footer and contact section",
-        "Service tagline 'Glow Your Beautiful Moments' appears in the hero, services section, or footer"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/About.tsx",
-          "operation": "modify",
-          "description": "Replace the existing About section narrative copy with 'It Is My Dream Business'. Keep the three animated stat cards unchanged. Ensure the new text is styled consistently with the existing warm theme."
-        },
-        {
-          "path": "frontend/src/components/Hero.tsx",
-          "operation": "modify",
-          "description": "Update the hero slogan or description to include the tagline 'Glow Your Beautiful Moments'. Replace or append this tagline to the existing hero copy, ensuring it is prominently displayed and styled with the warm theme."
-        },
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Update the footer contact details to display the location 'Diamond Harbour, Falta' and the phone number '+91 86173 76874'. Replace the existing location and phone number in the footer contact section with these new values. Ensure the formatting and styling remain consistent with the existing footer design."
-        },
-        {
-          "path": "frontend/src/components/Contact.tsx",
-          "operation": "modify",
-          "description": "Update the Contact section to display the phone number '+91 86173 76874' and the location 'Diamond Harbour, Falta'. Replace the existing contact details with these new values. Update the WhatsApp button link to use the new phone number. Ensure all changes are styled consistently with the existing warm theme."
-        },
-        {
-          "path": "frontend/src/components/Services.tsx",
-          "operation": "modify",
-          "description": "Add or update a section heading or description in the Products/Services section to include the tagline 'Glow Your Beautiful Moments'. This can be a subheading or introductory text above the product grid. Style it with the warm theme colors."
+          "description": "Update the payment step to display the UPI ID '6294577453@ybl' in place of any existing UPI payment identifier. Ensure no other UPI ID is displayed in the modal."
         }
       ]
     }
