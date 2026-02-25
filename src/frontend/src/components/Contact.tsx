@@ -87,8 +87,8 @@ export default function Contact() {
             {/* Contact details - Enhanced icons */}
             <div className="space-y-5 mb-8">
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center flex-shrink-0 border border-accent/30 shadow-sm">
-                  <User size={18} className="text-accent drop-shadow-sm" />
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-orange-500/30 to-orange-400/20 flex items-center justify-center flex-shrink-0 border-2 border-orange-400/80" style={{ boxShadow: '0 0 16px 5px rgba(251,146,60,0.75), 0 0 30px 8px rgba(251,146,60,0.35)' }}>
+                  <User size={18} className="text-orange-500" style={{ filter: 'drop-shadow(0 0 6px rgba(251,146,60,1))' }} />
                 </div>
                 <div className="flex flex-col gap-0.5">
                   <span className="font-body text-xs font-semibold tracking-widest uppercase text-muted-foreground">
@@ -99,8 +99,8 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5 border border-accent/30 shadow-sm">
-                  <Phone size={18} className="text-accent drop-shadow-sm" />
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-orange-500/30 to-orange-400/20 flex items-center justify-center flex-shrink-0 mt-0.5 border-2 border-orange-400/80" style={{ boxShadow: '0 0 16px 5px rgba(251,146,60,0.75), 0 0 30px 8px rgba(251,146,60,0.35)' }}>
+                  <Phone size={18} className="text-orange-500" style={{ filter: 'drop-shadow(0 0 6px rgba(251,146,60,1))' }} />
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="font-body text-xs font-semibold tracking-widest uppercase text-muted-foreground">
@@ -125,8 +125,8 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center flex-shrink-0 border border-accent/30 shadow-sm">
-                  <MapPin size={18} className="text-accent drop-shadow-sm" />
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-orange-500/30 to-orange-400/20 flex items-center justify-center flex-shrink-0 border-2 border-orange-400/80" style={{ boxShadow: '0 0 16px 5px rgba(251,146,60,0.75), 0 0 30px 8px rgba(251,146,60,0.35)' }}>
+                  <MapPin size={18} className="text-orange-500" style={{ filter: 'drop-shadow(0 0 6px rgba(251,146,60,1))' }} />
                 </div>
                 <div className="flex flex-col gap-0.5">
                   <span className="font-body text-xs font-semibold tracking-widest uppercase text-muted-foreground">
@@ -137,8 +137,8 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center flex-shrink-0 border border-accent/30 shadow-sm">
-                  <Mail size={18} className="text-accent drop-shadow-sm" />
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-orange-500/30 to-orange-400/20 flex items-center justify-center flex-shrink-0 border-2 border-orange-400/80" style={{ boxShadow: '0 0 16px 5px rgba(251,146,60,0.75), 0 0 30px 8px rgba(251,146,60,0.35)' }}>
+                  <Mail size={18} className="text-orange-500" style={{ filter: 'drop-shadow(0 0 6px rgba(251,146,60,1))' }} />
                 </div>
                 <div className="flex flex-col gap-0.5">
                   <span className="font-body text-xs font-semibold tracking-widest uppercase text-muted-foreground">

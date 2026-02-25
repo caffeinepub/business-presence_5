@@ -110,9 +110,15 @@ export default function Products({
                     <h3 className="font-display text-lg font-semibold text-foreground leading-snug mb-2">
                       {product.name}
                     </h3>
-                    {/* Enhanced price display with background and glow */}
-                    <div className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-br from-accent/20 to-accent/10 border-2 border-accent/40 shadow-lg">
-                      <span className="font-body text-3xl font-extrabold text-accent drop-shadow-sm">
+                    {/* Price display with black shadow/glow */}
+                    <div
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-br from-gray-900/90 to-gray-800/80 border-2 border-gray-700"
+                      style={{ boxShadow: '0 0 16px 5px rgba(0,0,0,0.7), 0 2px 8px rgba(0,0,0,0.9)' }}
+                    >
+                      <span
+                        className="font-body text-3xl font-extrabold text-white"
+                        style={{ textShadow: '0 0 12px rgba(0,0,0,1), 0 0 24px rgba(0,0,0,0.8)' }}
+                      >
                         ₹{product.price}
                       </span>
                     </div>
