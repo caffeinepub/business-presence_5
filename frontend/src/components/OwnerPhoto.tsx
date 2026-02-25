@@ -1,7 +1,7 @@
 export default function OwnerPhoto() {
   return (
     <div
-      className="fixed bottom-28 right-4 z-40 flex flex-col items-center gap-1.5"
+      className="fixed top-20 right-4 z-40 flex flex-col items-center gap-1.5"
       aria-label="Owner photo"
     >
       <div className="relative">

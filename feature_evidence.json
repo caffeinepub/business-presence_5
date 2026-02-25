@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-move-the-ownerphoto-floating-widget-so-it-is-fixed-at-the-bottom-right-corner-of-the-viewport-it-must-not-overlap-or-conflict-with-the-floatingwhatsapp-button-place-it-directly-above-the-whatsapp-button-e-g-bottom-24-right-4-so-both-are-visible-and-separated-the-circular-photo-glow-ring-and-name-label-must-all-remain-intact",
-      "featureTitle": "Move the OwnerPhoto floating widget so it is fixed at the bottom-right corner of the viewport. It must not overlap or conflict with the FloatingWhatsApp button — place it directly above the WhatsApp button (e.g., bottom-24 right-4) so both are visible and separated. The circular photo, glow ring, and name label must all remain intact.",
+      "featureId": "feature-reposition-the-ownerphoto-floating-widget-from-the-bottom-right-corner-to-the-top-right-corner-of-the-viewport-update-the-fixed-positioning-in-ownerphoto-tsx-so-it-is-anchored-to-the-top-and-right-edges-of-the-screen-e-g-top-4-right-4-ensuring-it-does-not-overlap-or-conflict-with-the-navigation-bar-adjust-z-index-as-needed-so-it-remains-visible-above-other-content",
+      "featureTitle": "Reposition the OwnerPhoto floating widget from the bottom-right corner to the top-right corner of the viewport. Update the fixed positioning in OwnerPhoto.tsx so it is anchored to the top and right edges of the screen (e.g., top-4 right-4), ensuring it does not overlap or conflict with the Navigation bar. Adjust z-index as needed so it remains visible above other content.",
       "files": [
         "frontend/src/components/OwnerPhoto.tsx"
       ],

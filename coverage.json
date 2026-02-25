@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-25T20:44:14.316Z",
+  "generatedAt": "2026-02-25T20:49:53.677Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -12,7 +12,7 @@
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Move the OwnerPhoto floating widget so it is fixed at the bottom-right corner of the viewport. It must not overlap or conflict with the FloatingWhatsApp button — place it directly above the WhatsApp button (e.g., bottom-24 right-4) so both are visible and separated. The circular photo, glow ring, and name label must all remain intact.",
+        "summary": "Reposition the OwnerPhoto floating widget from the bottom-right corner to the top-right corner of the viewport. Update the fixed positioning in OwnerPhoto.tsx so it is anchored to the top and right edges of the screen (e.g., top-4 right-4), ensuring it does not overlap or conflict with the Navigation bar. Adjust z-index as needed so it remains visible above other content.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/OwnerPhoto.tsx"

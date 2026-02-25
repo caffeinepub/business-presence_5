@@ -1,36 +1,38 @@
 {
   "kind": "build_request",
-  "title": "Position OwnerPhoto widget at bottom-right corner",
+  "title": "Reposition owner photo to top-right of the website",
+  "projectName": "Melt & Glow",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Move the OwnerPhoto floating widget so it is fixed at the bottom-right corner of the viewport. It must not overlap or conflict with the FloatingWhatsApp button — place it directly above the WhatsApp button (e.g., bottom-24 right-4) so both are visible and separated. The circular photo, glow ring, and name label must all remain intact.",
+      "text": "Reposition the OwnerPhoto floating widget from the bottom-right corner to the top-right corner of the viewport. Update the fixed positioning in OwnerPhoto.tsx so it is anchored to the top and right edges of the screen (e.g., top-4 right-4), ensuring it does not overlap or conflict with the Navigation bar. Adjust z-index as needed so it remains visible above other content.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "This place buttom right side owner photo"
+          "Top and Right Side of the website put owner photo"
         ]
       },
       "acceptanceCriteria": [
-        "The OwnerPhoto component is fixed to the bottom-right corner of the screen on all viewport sizes.",
-        "The OwnerPhoto does not overlap the FloatingWhatsApp button — there is clear vertical separation between the two.",
-        "The circular owner photo, glow ring, and name label are fully visible and not clipped.",
-        "The widget remains in the bottom-right on mobile, tablet, and desktop screen sizes."
+        "The owner photo widget is visually positioned in the top-right corner of the viewport on all screen sizes.",
+        "The widget does not overlap or obscure the Navigation bar's interactive elements (links, cart/wishlist icons).",
+        "The circular photo, glow ring, and name label remain intact and fully visible.",
+        "The FloatingWhatsApp button in the bottom-right corner is unaffected.",
+        "The widget maintains correct z-index layering so it appears above page content."
       ]
     }
   ],
   "constraints": [
-    "Do not remove or modify the FloatingWhatsApp component.",
-    "Do not alter the owner photo image, glow ring style, or name label content."
+    "Do not modify any files listed under frontend.immutablePaths.",
+    "The FloatingWhatsApp button placement must remain unchanged at the bottom-right."
   ],
   "nonGoals": [
-    "Adding new sections or features to the page.",
-    "Changing the owner photo image.",
-    "Modifying backend logic."
+    "Changing the owner photo image itself.",
+    "Modifying the Navigation component layout or styling.",
+    "Adding any new owner photo instances elsewhere on the page."
   ],
   "imageRequirements": {
     "required": [],

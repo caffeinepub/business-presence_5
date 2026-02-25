@@ -1,22 +1,23 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Position OwnerPhoto widget at bottom-right corner",
+  "title": "Reposition owner photo to top-right of the website",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Move the OwnerPhoto floating widget to the bottom-right corner with proper separation from the FloatingWhatsApp button",
+      "summary": "Reposition the OwnerPhoto floating widget from the bottom-right corner to the top-right corner of the viewport",
       "acceptanceCriteria": [
-        "The OwnerPhoto component is fixed to the bottom-right corner of the screen on all viewport sizes.",
-        "The OwnerPhoto does not overlap the FloatingWhatsApp button — there is clear vertical separation between the two.",
-        "The circular owner photo, glow ring, and name label are fully visible and not clipped.",
-        "The widget remains in the bottom-right on mobile, tablet, and desktop screen sizes."
+        "The owner photo widget is visually positioned in the top-right corner of the viewport on all screen sizes.",
+        "The widget does not overlap or obscure the Navigation bar's interactive elements (links, cart/wishlist icons).",
+        "The circular photo, glow ring, and name label remain intact and fully visible.",
+        "The FloatingWhatsApp button in the bottom-right corner is unaffected.",
+        "The widget maintains correct z-index layering so it appears above page content."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/OwnerPhoto.tsx",
           "operation": "modify",
-          "description": "Update the positioning classes of the OwnerPhoto component to place it at the bottom-right corner using fixed positioning (e.g., bottom-24 right-4) to ensure vertical separation above the FloatingWhatsApp button. Verify that the circular photo container, glow ring animation, and name label remain fully visible and not clipped on all viewport sizes (mobile, tablet, desktop). Ensure the component uses the generated owner photo image at frontend/public/assets/generated/owner-photo.dim_120x120.png."
+          "description": "Update the fixed positioning classes from bottom-right (e.g., bottom-4 right-4) to top-right (e.g., top-4 right-4). Ensure the z-index is set appropriately (e.g., z-40 or z-50) so the widget appears above page content but does not conflict with the Navigation bar. Verify that the circular photo, glow ring animation, and owner name label remain visually intact and fully visible in the new top-right position. Test across desktop and mobile viewports to confirm the widget does not overlap the Navigation bar's interactive elements (links, cart/wishlist icons)."
         }
       ]
     }
