@@ -42,15 +42,15 @@ export default function About() {
             </button>
           </div>
 
-          {/* Stats */}
+          {/* Stats - Enhanced icons */}
           <div className="grid grid-cols-1 gap-6">
             {stats.map(({ icon: Icon, value, label }) => (
               <div
                 key={label}
                 className="flex items-center gap-6 p-6 bg-card rounded-lg shadow-card border border-border hover:shadow-card-hover transition-shadow duration-300"
               >
-                <div className="flex-shrink-0 w-14 h-14 rounded-md bg-accent/10 flex items-center justify-center">
-                  <Icon className="w-7 h-7 text-accent" strokeWidth={1.5} />
+                <div className="flex-shrink-0 w-16 h-16 rounded-lg bg-gradient-to-br from-accent/20 to-accent/10 border-2 border-accent/30 flex items-center justify-center shadow-md">
+                  <Icon className="w-8 h-8 text-accent drop-shadow-sm" strokeWidth={2} />
                 </div>
                 <div>
                   <p className="font-display text-3xl font-bold text-foreground">{value}</p>

@@ -84,20 +84,20 @@ export default function Products({
                     alt={product.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  {/* Wishlist heart icon on image */}
+                  {/* Wishlist heart icon on image - Enhanced */}
                   <button
                     type="button"
                     onClick={() => onToggleWishlist(product)}
                     aria-label={wishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
-                    className={`absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center shadow-md transition-all duration-200 ${
+                    className={`absolute top-3 right-3 w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 border-2 ${
                       wishlisted
-                        ? 'bg-accent text-accent-foreground scale-110'
-                        : 'bg-white/90 text-muted-foreground hover:bg-accent hover:text-accent-foreground'
+                        ? 'bg-accent text-accent-foreground scale-110 border-accent-foreground/20 shadow-accent/40'
+                        : 'bg-white/95 text-accent hover:bg-accent hover:text-accent-foreground hover:scale-105 border-white/50 hover:border-accent-foreground/20'
                     }`}
                   >
                     <Heart
-                      size={16}
-                      className={wishlisted ? 'fill-current' : ''}
+                      size={18}
+                      className={`${wishlisted ? 'fill-current' : ''} drop-shadow-sm`}
                     />
                   </button>
                 </div>
@@ -105,33 +105,36 @@ export default function Products({
                 {/* Card body */}
                 <div className="flex flex-col flex-1 p-4 gap-3">
                   <div>
-                    <h3 className="font-display text-lg font-semibold text-foreground leading-snug mb-1">
+                    <h3 className="font-display text-lg font-semibold text-foreground leading-snug mb-2">
                       {product.name}
                     </h3>
-                    <p className="font-body text-2xl font-bold text-accent">
-                      ₹{product.price}
-                    </p>
+                    {/* Enhanced price display with background and glow */}
+                    <div className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-br from-accent/20 to-accent/10 border-2 border-accent/40 shadow-lg">
+                      <span className="font-body text-3xl font-extrabold text-accent drop-shadow-sm">
+                        ₹{product.price}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Action buttons */}
                   <div className="flex flex-col gap-2 mt-auto">
-                    {/* Place Order */}
+                    {/* Place Order - Enhanced with shadow */}
                     <button
                       type="button"
                       onClick={() => onPlaceOrder(product)}
-                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-accent text-accent-foreground text-sm font-semibold font-body hover:opacity-90 active:scale-95 transition-all duration-200"
+                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-accent text-accent-foreground text-sm font-semibold font-body hover:opacity-90 hover:shadow-lg active:scale-95 transition-all duration-200 shadow-md"
                     >
-                      <ShoppingBag size={15} />
+                      <ShoppingBag size={16} className="drop-shadow-sm" />
                       Place Order
                     </button>
 
-                    {/* Add to Cart */}
+                    {/* Add to Cart - Enhanced with gradient background and shadow */}
                     <button
                       type="button"
                       onClick={() => onAddToCart(product)}
-                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full border-2 border-accent text-accent text-sm font-semibold font-body hover:bg-accent hover:text-accent-foreground active:scale-95 transition-all duration-200"
+                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-accent/15 via-accent/10 to-accent/15 border-2 border-accent text-accent text-sm font-semibold font-body hover:bg-gradient-to-r hover:from-accent hover:via-accent/90 hover:to-accent hover:text-accent-foreground hover:shadow-lg hover:border-accent-foreground/20 active:scale-95 transition-all duration-200 shadow-md"
                     >
-                      <ShoppingCart size={15} />
+                      <ShoppingCart size={16} className="drop-shadow-sm" />
                       Add to Cart
                     </button>
                   </div>

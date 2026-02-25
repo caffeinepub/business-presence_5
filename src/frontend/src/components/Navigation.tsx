@@ -153,31 +153,31 @@ export default function Navigation({
 
         {/* Desktop right actions */}
         <div className="hidden md:flex items-center gap-2">
-          {/* Wishlist icon */}
+          {/* Wishlist icon - Enhanced */}
           <button
             type="button"
             onClick={onWishlistClick}
             aria-label={`Wishlist (${wishlistItemCount} items)`}
-            className="relative p-2 rounded-full text-muted-foreground hover:text-accent hover:bg-accent/10 transition-colors"
+            className="relative p-2.5 rounded-full text-muted-foreground hover:text-accent hover:bg-accent/15 transition-all border border-transparent hover:border-accent/30 hover:shadow-md"
           >
-            <Heart size={20} />
+            <Heart size={21} className="drop-shadow-sm" />
             {wishlistItemCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-accent text-accent-foreground text-[10px] font-bold flex items-center justify-center leading-none">
+              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent text-accent-foreground text-[10px] font-bold flex items-center justify-center leading-none shadow-md border border-accent-foreground/20">
                 {wishlistItemCount > 9 ? '9+' : wishlistItemCount}
               </span>
             )}
           </button>
 
-          {/* Cart icon */}
+          {/* Cart icon - Enhanced */}
           <button
             type="button"
             onClick={onCartClick}
             aria-label={`Cart (${cartItemCount} items)`}
-            className="relative p-2 rounded-full text-muted-foreground hover:text-accent hover:bg-accent/10 transition-colors"
+            className="relative p-2.5 rounded-full text-muted-foreground hover:text-accent hover:bg-accent/15 transition-all border border-transparent hover:border-accent/30 hover:shadow-md"
           >
-            <ShoppingCart size={20} />
+            <ShoppingCart size={21} className="drop-shadow-sm" />
             {cartItemCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-accent text-accent-foreground text-[10px] font-bold flex items-center justify-center leading-none">
+              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent text-accent-foreground text-[10px] font-bold flex items-center justify-center leading-none shadow-md border border-accent-foreground/20">
                 {cartItemCount > 9 ? '9+' : cartItemCount}
               </span>
             )}
@@ -186,23 +186,23 @@ export default function Navigation({
           <button
             type="button"
             onClick={() => handleNavClick('#contact')}
-            className="ml-1 inline-flex items-center px-5 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium font-body hover:opacity-90 transition-opacity"
+            className="ml-1 inline-flex items-center px-5 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium font-body hover:opacity-90 transition-opacity shadow-md"
           >
             Get in Touch
           </button>
         </div>
 
-        {/* Mobile right actions */}
+        {/* Mobile right actions - Enhanced */}
         <div className="md:hidden flex items-center gap-1">
           <button
             type="button"
             onClick={onWishlistClick}
             aria-label={`Wishlist (${wishlistItemCount} items)`}
-            className="relative p-2 rounded-full text-foreground hover:text-accent transition-colors"
+            className="relative p-2 rounded-full text-foreground hover:text-accent hover:bg-accent/10 transition-all"
           >
-            <Heart size={20} />
+            <Heart size={21} className="drop-shadow-sm" />
             {wishlistItemCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-accent text-accent-foreground text-[10px] font-bold flex items-center justify-center leading-none">
+              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent text-accent-foreground text-[10px] font-bold flex items-center justify-center leading-none shadow-md border border-accent-foreground/20">
                 {wishlistItemCount > 9 ? '9+' : wishlistItemCount}
               </span>
             )}
@@ -211,11 +211,11 @@ export default function Navigation({
             type="button"
             onClick={onCartClick}
             aria-label={`Cart (${cartItemCount} items)`}
-            className="relative p-2 rounded-full text-foreground hover:text-accent transition-colors"
+            className="relative p-2 rounded-full text-foreground hover:text-accent hover:bg-accent/10 transition-all"
           >
-            <ShoppingCart size={20} />
+            <ShoppingCart size={21} className="drop-shadow-sm" />
             {cartItemCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-accent text-accent-foreground text-[10px] font-bold flex items-center justify-center leading-none">
+              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent text-accent-foreground text-[10px] font-bold flex items-center justify-center leading-none shadow-md border border-accent-foreground/20">
                 {cartItemCount > 9 ? '9+' : cartItemCount}
               </span>
             )}

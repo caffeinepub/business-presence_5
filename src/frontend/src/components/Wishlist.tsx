@@ -32,15 +32,17 @@ export default function Wishlist({
         }`}
         aria-label="Wishlist"
       >
-        {/* Header */}
+        {/* Header - Enhanced icon */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-border">
           <div className="flex items-center gap-2">
-            <Heart size={20} className="text-accent fill-accent" />
+            <div className="w-9 h-9 rounded-full bg-accent/15 flex items-center justify-center border border-accent/30">
+              <Heart size={18} className="text-accent fill-accent drop-shadow-sm" />
+            </div>
             <h2 className="font-display text-lg font-semibold text-foreground">
               Wishlist
             </h2>
             {items.length > 0 && (
-              <span className="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent text-xs font-bold font-body">
+              <span className="ml-1 px-2 py-0.5 rounded-full bg-accent/15 border border-accent/30 text-accent text-xs font-bold font-body">
                 {items.length}
               </span>
             )}
@@ -96,9 +98,12 @@ export default function Wishlist({
                       <X size={14} />
                     </button>
                   </div>
-                  <p className="font-body text-lg font-bold text-accent mt-1">
-                    ₹{product.price}
-                  </p>
+                  {/* Enhanced price display in wishlist */}
+                  <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-accent/10 border border-accent/30 mt-1">
+                    <span className="font-body text-base font-bold text-accent">
+                      ₹{product.price}
+                    </span>
+                  </div>
                 </div>
               </div>
             ))

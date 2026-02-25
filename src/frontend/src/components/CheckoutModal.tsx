@@ -292,10 +292,12 @@ export default function CheckoutModal({
           {/* ── Step 2: Payment ── */}
           {step === 'payment' && (
             <div className="space-y-5">
-              {/* Delivery address recap */}
+              {/* Delivery address recap - Enhanced icon */}
               <div className="bg-sand rounded-lg p-3">
                 <div className="flex items-center gap-1.5 mb-1.5">
-                  <MapPin size={13} className="text-accent" />
+                  <div className="w-6 h-6 rounded-full bg-accent/15 flex items-center justify-center border border-accent/30">
+                    <MapPin size={12} className="text-accent" />
+                  </div>
                   <p className="font-body text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                     Delivering to
                   </p>
@@ -307,27 +309,31 @@ export default function CheckoutModal({
                 <p className="font-body text-sm text-muted-foreground">📞 {address.phoneNumber}</p>
               </div>
 
-              {/* Order summary */}
+              {/* Order summary - Enhanced price display */}
               <div className="bg-sand rounded-lg p-3">
                 <p className="font-body text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">
                   Order Summary
                 </p>
                 {orderItems.map((item) => (
-                  <div key={item.product.id} className="flex justify-between text-sm font-body text-foreground">
+                  <div key={item.product.id} className="flex justify-between text-sm font-body text-foreground mb-1">
                     <span>{item.product.name} × {item.quantity}</span>
-                    <span className="font-semibold">₹{item.product.price * item.quantity}</span>
+                    <span className="font-semibold text-accent">₹{item.product.price * item.quantity}</span>
                   </div>
                 ))}
-                <div className="border-t border-border mt-2 pt-2 flex justify-between font-body font-bold text-foreground">
-                  <span>Total</span>
-                  <span className="text-accent text-lg">₹{total}</span>
+                <div className="border-t border-border mt-2 pt-2 flex justify-between items-center font-body">
+                  <span className="font-semibold text-foreground">Total</span>
+                  <div className="inline-flex items-center gap-1 px-3 py-1 rounded-md bg-accent/15 border border-accent/40">
+                    <span className="font-display text-xl font-bold text-accent">₹{total}</span>
+                  </div>
                 </div>
               </div>
 
-              {/* UPI Payment */}
+              {/* UPI Payment - Enhanced icon */}
               <div className="border-2 border-accent/30 rounded-xl p-4 bg-accent/5">
                 <div className="flex items-center gap-2 mb-3">
-                  <CreditCard size={18} className="text-accent" />
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center border border-accent/30 shadow-sm">
+                    <CreditCard size={18} className="text-accent drop-shadow-sm" />
+                  </div>
                   <h3 className="font-display text-base font-semibold text-foreground">
                     Payment Method: UPI Only
                   </h3>

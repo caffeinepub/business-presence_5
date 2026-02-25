@@ -84,11 +84,11 @@ export default function Contact() {
               The quickest way to order is via WhatsApp — we'll get back to you right away.
             </p>
 
-            {/* Contact details */}
+            {/* Contact details - Enhanced icons */}
             <div className="space-y-5 mb-8">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <User size={16} className="text-accent" />
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center flex-shrink-0 border border-accent/30 shadow-sm">
+                  <User size={18} className="text-accent drop-shadow-sm" />
                 </div>
                 <div className="flex flex-col gap-0.5">
                   <span className="font-body text-xs font-semibold tracking-widest uppercase text-muted-foreground">
@@ -99,8 +99,8 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Phone size={16} className="text-accent" />
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5 border border-accent/30 shadow-sm">
+                  <Phone size={18} className="text-accent drop-shadow-sm" />
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="font-body text-xs font-semibold tracking-widest uppercase text-muted-foreground">
@@ -125,8 +125,8 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin size={16} className="text-accent" />
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center flex-shrink-0 border border-accent/30 shadow-sm">
+                  <MapPin size={18} className="text-accent drop-shadow-sm" />
                 </div>
                 <div className="flex flex-col gap-0.5">
                   <span className="font-body text-xs font-semibold tracking-widest uppercase text-muted-foreground">
@@ -137,8 +137,8 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Mail size={16} className="text-accent" />
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center flex-shrink-0 border border-accent/30 shadow-sm">
+                  <Mail size={18} className="text-accent drop-shadow-sm" />
                 </div>
                 <div className="flex flex-col gap-0.5">
                   <span className="font-body text-xs font-semibold tracking-widest uppercase text-muted-foreground">
@@ -154,18 +154,18 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* WhatsApp order button */}
+            {/* WhatsApp order button - Enhanced */}
             <a
               href={OWNER.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#25D366] text-white font-body font-semibold text-sm hover:opacity-90 transition-opacity mb-8"
+              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#25D366] text-white font-body font-semibold text-sm hover:opacity-90 hover:shadow-lg transition-all duration-200 mb-8 shadow-md"
             >
               <SiWhatsapp size={18} />
               Order on WhatsApp
             </a>
 
-            {/* Social links */}
+            {/* Social links - Enhanced */}
             <div className="flex items-center gap-3">
               {[
                 { Icon: SiInstagram, label: 'Instagram', href: OWNER.instagram },
@@ -177,7 +177,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-9 h-9 rounded-full bg-accent/10 hover:bg-accent/20 flex items-center justify-center transition-colors duration-200 text-accent"
+                  className="w-11 h-11 rounded-full bg-gradient-to-br from-accent/20 to-accent/10 hover:from-accent/30 hover:to-accent/15 border border-accent/30 hover:border-accent/50 flex items-center justify-center transition-all duration-200 text-accent shadow-sm hover:shadow-md"
                 >
                   <Icon size={16} />
                 </a>

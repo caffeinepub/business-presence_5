@@ -17,10 +17,11 @@ export default function TrustBadges() {
               key={item.label}
               className="flex flex-col items-center gap-2 text-center group"
             >
-              <span className="flex items-center justify-center w-11 h-11 rounded-full bg-accent/15 group-hover:bg-accent/25 transition-colors duration-200">
+              {/* Enhanced icon with gradient background and border */}
+              <span className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-accent/25 to-accent/10 border-2 border-accent/40 group-hover:border-accent/60 group-hover:shadow-lg transition-all duration-200 shadow-md">
                 <CheckCircle2
-                  className="w-6 h-6 text-accent"
-                  strokeWidth={2}
+                  className="w-7 h-7 text-accent drop-shadow-sm"
+                  strokeWidth={2.5}
                   aria-hidden="true"
                 />
               </span>
