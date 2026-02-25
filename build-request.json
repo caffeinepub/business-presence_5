@@ -1,0 +1,141 @@
+{
+  "kind": "build_request",
+  "title": "Add Place Order, Add to Cart, Wishlist, Customer Address, UPI Payment & Business Details",
+  "projectName": "Melt & Glow",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Below the price of each candle product card in the Services/Products section, add three action elements: a 'Place Order' button, an 'Add to Cart' button, and a Wishlist heart icon button. All three should be visually styled to match the warm terracotta/sand theme of the shop.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Buttom of price a button like this Place Order and Add to card and Wishlist icon"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each product card displays a 'Place Order' button directly below the price",
+        "Each product card displays an 'Add to Cart' button below the price",
+        "Each product card displays a Wishlist heart icon button",
+        "All three elements are consistently styled with the site's warm color theme"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a Cart area (slide-out drawer or dedicated section) that lists items added via 'Add to Cart'. It should display product name, price, quantity controls, and a subtotal. Cart state should be managed in React state.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Add to card are"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking 'Add to Cart' on a product adds it to the cart area",
+        "Cart area shows product name, price, and quantity",
+        "Cart area shows a subtotal",
+        "Cart can be opened/closed by the user",
+        "Items can be removed from the cart"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add a Wishlist area (dedicated section or slide-out panel) that lists items saved via the Wishlist heart icon on product cards. Wishlist state should be managed in React state.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Wishlist area"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking the heart icon on a product adds it to the Wishlist area",
+        "Wishlist area displays saved products with name and price",
+        "Heart icon toggles filled/unfilled to reflect wishlist status",
+        "Items can be removed from the wishlist"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add a Customer Address input section in the checkout/order flow (triggered by 'Place Order'). The form should collect: full name, street address, city/town, PIN code, and phone number.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Coustomer address"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking 'Place Order' opens a modal or section with an address form",
+        "Form fields include: full name, street address, city/town, PIN code, and phone number",
+        "All fields are validated before submission",
+        "Form is styled consistently with the site theme"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "In the order/checkout flow, offer only UPI as the payment method. Display a UPI payment option with a UPI ID or QR code placeholder. No other payment methods (cash, card, etc.) should be shown.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "only UPI payment"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Payment section shows only UPI as the payment method",
+        "No card or cash-on-delivery options are present",
+        "UPI section includes a label and a placeholder UPI ID or QR code area",
+        "Payment section is shown after the address form in the order flow"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Update the About section text to read: 'It Is My Dream Business'. Update the home/location detail displayed on the site (footer, contact, or about) to show: 'Diamond Harbour, Falta'. Update the contact phone number to '+91 86173 76874'. Update the service tagline to 'Glow Your Beautiful Moments'.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "my Home Diamond Harbour, Falta",
+          "About is It Is My Dream Buisness",
+          "Contact is +918617376874",
+          "Service Is Glow Your Beautiful Moment's"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About section includes the text 'It Is My Dream Business'",
+        "Location 'Diamond Harbour, Falta' is displayed in the footer and/or contact section",
+        "Contact phone number shows '+91 86173 76874' in footer and contact section",
+        "Service tagline 'Glow Your Beautiful Moments' appears in the hero, services section, or footer"
+      ]
+    }
+  ],
+  "constraints": [
+    "Only UPI payment method should be offered — do not include card, net banking, or cash on delivery",
+    "Do not modify files under frontend/src/hooks/ or frontend/src/components/ui",
+    "Cart and Wishlist state should be managed client-side in React state only — no backend changes required"
+  ],
+  "nonGoals": [
+    "Real payment gateway integration",
+    "Backend order storage or order history",
+    "User authentication for cart or wishlist",
+    "WhatsApp order flow replacement (existing WhatsApp buttons may coexist)"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

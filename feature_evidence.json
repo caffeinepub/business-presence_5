@@ -1,0 +1,142 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-below-the-price-of-each-candle-product-card-in-the-services-products-section-add-three-action-elements-a-place-order-button-an-add-to-cart-button-and-a-wishlist-heart-icon-button-all-three-should-be-visually-styled-to-match-the-warm-terracotta-sand-theme-of-the-shop",
+      "featureTitle": "Below the price of each candle product card in the Services/Products section, add three action elements: a 'Place Order' button, an 'Add to Cart' button, and a Wishlist heart icon button. All three should be visually styled to match the warm terracotta/sand theme of the shop.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Services.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "qr-code@1.0.0",
+        "camera@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-cart-area-slide-out-drawer-or-dedicated-section-that-lists-items-added-via-add-to-cart-it-should-display-product-name-price-quantity-controls-and-a-subtotal-cart-state-should-be-managed-in-react-state",
+      "featureTitle": "Add a Cart area (slide-out drawer or dedicated section) that lists items added via 'Add to Cart'. It should display product name, price, quantity controls, and a subtotal. Cart state should be managed in React state.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Cart.tsx",
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "qr-code@1.0.0",
+        "camera@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-wishlist-area-dedicated-section-or-slide-out-panel-that-lists-items-saved-via-the-wishlist-heart-icon-on-product-cards-wishlist-state-should-be-managed-in-react-state",
+      "featureTitle": "Add a Wishlist area (dedicated section or slide-out panel) that lists items saved via the Wishlist heart icon on product cards. Wishlist state should be managed in React state.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Navigation.tsx",
+        "frontend/src/components/Services.tsx",
+        "frontend/src/components/Wishlist.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "qr-code@1.0.0",
+        "camera@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-customer-address-input-section-in-the-checkout-order-flow-triggered-by-place-order-the-form-should-collect-full-name-street-address-city-town-pin-code-and-phone-number",
+      "featureTitle": "Add a Customer Address input section in the checkout/order flow (triggered by 'Place Order'). The form should collect: full name, street address, city/town, PIN code, and phone number.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/CheckoutModal.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "qr-code@1.0.0",
+        "camera@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-in-the-order-checkout-flow-offer-only-upi-as-the-payment-method-display-a-upi-payment-option-with-a-upi-id-or-qr-code-placeholder-no-other-payment-methods-cash-card-etc-should-be-shown",
+      "featureTitle": "In the order/checkout flow, offer only UPI as the payment method. Display a UPI payment option with a UPI ID or QR code placeholder. No other payment methods (cash, card, etc.) should be shown.",
+      "files": [
+        "frontend/src/components/CheckoutModal.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "qr-code@1.0.0",
+        "camera@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-about-section-text-to-read-it-is-my-dream-business-update-the-home-location-detail-displayed-on-the-site-footer-contact-or-about-to-show-diamond-harbour-falta-update-the-contact-phone-number-to-91-86173-76874-update-the-service-tagline-to-glow-your-beautiful-moments",
+      "featureTitle": "Update the About section text to read: 'It Is My Dream Business'. Update the home/location detail displayed on the site (footer, contact, or about) to show: 'Diamond Harbour, Falta'. Update the contact phone number to '+91 86173 76874'. Update the service tagline to 'Glow Your Beautiful Moments'.",
+      "files": [
+        "frontend/src/components/About.tsx",
+        "frontend/src/components/Contact.tsx",
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/Hero.tsx",
+        "frontend/src/components/Services.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "qr-code@1.0.0",
+        "camera@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
