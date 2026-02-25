@@ -35,7 +35,7 @@ export default function About() {
               onClick={() => {
                 document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="inline-flex items-center gap-2 font-body font-semibold text-accent hover:gap-3 transition-all duration-200 group"
+              className="inline-flex items-center gap-2 font-body font-semibold text-orange-500 hover:gap-3 transition-all duration-200 group"
             >
               Order Now
               <span className="text-lg group-hover:translate-x-1 transition-transform duration-200">→</span>
@@ -49,8 +49,11 @@ export default function About() {
                 key={label}
                 className="flex items-center gap-6 p-6 bg-card rounded-lg shadow-card border border-border hover:shadow-card-hover transition-shadow duration-300"
               >
-                <div className="flex-shrink-0 w-16 h-16 rounded-lg bg-gradient-to-br from-accent/20 to-accent/10 border-2 border-accent/30 flex items-center justify-center shadow-md">
-                  <Icon className="w-8 h-8 text-accent drop-shadow-sm" strokeWidth={2} />
+                <div
+                  className="flex-shrink-0 w-16 h-16 rounded-lg bg-orange-50 border-2 border-orange-300 flex items-center justify-center"
+                  style={{boxShadow:'0 0 12px 4px rgba(251,146,60,0.40)'}}
+                >
+                  <Icon className="w-8 h-8 text-orange-500" strokeWidth={2} style={{filter:'drop-shadow(0 0 5px rgba(251,146,60,0.7))'}} />
                 </div>
                 <div>
                   <p className="font-display text-3xl font-bold text-foreground">{value}</p>

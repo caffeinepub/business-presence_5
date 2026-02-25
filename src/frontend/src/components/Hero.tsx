@@ -64,12 +64,14 @@ export default function Hero({ onCtaClick }: HeroProps) {
           style={{ animationDelay: '0.35s' }}
         >
           <button
+            type="button"
             onClick={onCtaClick}
-            className="px-8 py-3.5 rounded-full bg-accent text-accent-foreground font-body font-semibold text-base hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            className="px-8 py-3.5 rounded-full bg-orange-500 text-white font-body font-semibold text-base hover:bg-orange-600 transition-all duration-200 hover:-translate-y-0.5 btn-orange-glow"
           >
             Shop Now
           </button>
           <button
+            type="button"
             onClick={() => {
               document.querySelector('#products')?.scrollIntoView({ behavior: 'smooth' });
             }}

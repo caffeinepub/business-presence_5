@@ -84,20 +84,22 @@ export default function Products({
                     alt={product.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  {/* Wishlist heart icon on image - Enhanced */}
+                   {/* Wishlist heart icon on image - Enhanced with orange glow */}
                   <button
                     type="button"
                     onClick={() => onToggleWishlist(product)}
                     aria-label={wishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
-                    className={`absolute top-3 right-3 w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 border-2 ${
+                    className={`absolute top-3 right-3 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 border-2 ${
                       wishlisted
-                        ? 'bg-accent text-accent-foreground scale-110 border-accent-foreground/20 shadow-accent/40'
-                        : 'bg-white/95 text-accent hover:bg-accent hover:text-accent-foreground hover:scale-105 border-white/50 hover:border-accent-foreground/20'
+                        ? 'bg-orange-500 text-white scale-110 border-orange-300'
+                        : 'bg-white/95 text-orange-500 hover:bg-orange-500 hover:text-white hover:scale-105 border-orange-300/60'
                     }`}
+                    style={{boxShadow: '0 0 10px 3px rgba(251,146,60,0.55)'}}
                   >
                     <Heart
                       size={18}
-                      className={`${wishlisted ? 'fill-current' : ''} drop-shadow-sm`}
+                      className={`${wishlisted ? 'fill-current' : ''}`}
+                      style={{filter: 'drop-shadow(0 0 4px rgba(251,146,60,0.8))'}}
                     />
                   </button>
                 </div>
@@ -118,23 +120,24 @@ export default function Products({
 
                   {/* Action buttons */}
                   <div className="flex flex-col gap-2 mt-auto">
-                    {/* Place Order - Enhanced with shadow */}
+                     {/* Place Order - Orange glow */}
                     <button
                       type="button"
                       onClick={() => onPlaceOrder(product)}
-                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-accent text-accent-foreground text-sm font-semibold font-body hover:opacity-90 hover:shadow-lg active:scale-95 transition-all duration-200 shadow-md"
+                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-orange-500 text-white text-sm font-semibold font-body hover:bg-orange-600 active:scale-95 transition-all duration-200 btn-orange-glow"
                     >
-                      <ShoppingBag size={16} className="drop-shadow-sm" />
+                      <ShoppingBag size={16} style={{filter:'drop-shadow(0 0 4px rgba(255,255,255,0.8))'}} />
                       Place Order
                     </button>
 
-                    {/* Add to Cart - Enhanced with gradient background and shadow */}
+                    {/* Add to Cart - Orange outline with glow */}
                     <button
                       type="button"
                       onClick={() => onAddToCart(product)}
-                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-accent/15 via-accent/10 to-accent/15 border-2 border-accent text-accent text-sm font-semibold font-body hover:bg-gradient-to-r hover:from-accent hover:via-accent/90 hover:to-accent hover:text-accent-foreground hover:shadow-lg hover:border-accent-foreground/20 active:scale-95 transition-all duration-200 shadow-md"
+                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white border-2 border-orange-400 text-orange-500 text-sm font-semibold font-body hover:bg-orange-500 hover:text-white active:scale-95 transition-all duration-200"
+                      style={{boxShadow:'0 0 10px 2px rgba(251,146,60,0.40)'}}
                     >
-                      <ShoppingCart size={16} className="drop-shadow-sm" />
+                      <ShoppingCart size={16} style={{filter:'drop-shadow(0 0 3px rgba(251,146,60,0.7))'}} />
                       Add to Cart
                     </button>
                   </div>

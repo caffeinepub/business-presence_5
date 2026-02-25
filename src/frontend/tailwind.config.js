@@ -90,6 +90,9 @@ export default {
                 xs: '0 1px 2px 0 rgba(0,0,0,0.05)',
                 card: '0 2px 12px 0 rgba(80,50,30,0.08)',
                 'card-hover': '0 8px 32px 0 rgba(80,50,30,0.14)',
+                'orange-glow': '0 0 12px 3px rgba(251,146,60,0.55)',
+                'orange-glow-sm': '0 0 8px 2px rgba(251,146,60,0.45)',
+                'orange-btn': '0 4px 18px 0 rgba(251,146,60,0.50)',
             },
             keyframes: {
                 'accordion-down': {
