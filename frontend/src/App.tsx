@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
+import TrustBadges from './components/TrustBadges';
 import About from './components/About';
 import Products from './components/Services';
 import Contact from './components/Contact';
@@ -8,6 +9,8 @@ import Footer from './components/Footer';
 import Cart from './components/Cart';
 import Wishlist from './components/Wishlist';
 import CheckoutModal from './components/CheckoutModal';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
+import OwnerPhoto from './components/OwnerPhoto';
 
 export interface Product {
   id: string;
@@ -118,6 +121,7 @@ export default function App() {
       />
       <main>
         <Hero onCtaClick={scrollToContact} />
+        <TrustBadges />
         <About />
         <Products
           wishlistItems={wishlistItems}
@@ -151,6 +155,10 @@ export default function App() {
         orderItems={checkoutItems}
         onOrderComplete={handleOrderComplete}
       />
+
+      {/* Fixed bottom-right elements */}
+      <OwnerPhoto />
+      <FloatingWhatsApp />
     </div>
   );
 }

@@ -1,11 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Update business details across the Melt & Glow site — tagline, contact numbers, and UPI payment ID.
+**Goal:** Reposition the OwnerPhoto floating widget to the bottom-right corner of the viewport, placed directly above the FloatingWhatsApp button so both are visible without overlap.
 
 **Planned changes:**
-- Replace the brand tagline/description with "Handcrafted candles made with love by Arpan Ghosh" in the Hero section, About section, and Footer
-- Update the primary contact number to 6294577453 and add alternative number 8617376874 in the Contact section and Footer, with both as clickable `tel:` links
-- Update the UPI payment ID to `6294577453@ybl` in the CheckoutModal payment step
+- Change the OwnerPhoto widget positioning to `fixed`, anchored to the bottom-right corner (e.g., `bottom-24 right-4`)
+- Ensure vertical separation between the OwnerPhoto widget and the FloatingWhatsApp button so they do not overlap
+- Keep the circular photo, glow ring, and name label intact and fully visible
 
-**User-visible outcome:** Visitors see the updated tagline referencing Arpan Ghosh, both phone numbers in the contact areas, and the correct UPI ID during checkout.
+**User-visible outcome:** The owner photo widget appears fixed at the bottom-right corner of the screen on all device sizes, sitting just above the WhatsApp button, with both elements clearly visible and separated.

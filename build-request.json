@@ -1,71 +1,36 @@
 {
   "kind": "build_request",
-  "title": "Update business details: tagline, contact numbers, and UPI payment ID",
-  "projectName": "Melt & Glow",
+  "title": "Position OwnerPhoto widget at bottom-right corner",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Update the site tagline/description to 'Handcrafted candles made with love by Arpan Ghosh' wherever brand copy or taglines appear (Hero section, About section, Footer).",
+      "text": "Move the OwnerPhoto floating widget so it is fixed at the bottom-right corner of the viewport. It must not overlap or conflict with the FloatingWhatsApp button — place it directly above the WhatsApp button (e.g., bottom-24 right-4) so both are visible and separated. The circular photo, glow ring, and name label must all remain intact.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "Handcrafted candles made with love by Arpan Ghosh"
+          "This place buttom right side owner photo"
         ]
       },
       "acceptanceCriteria": [
-        "The phrase 'Handcrafted candles made with love by Arpan Ghosh' is visible in the Hero section tagline or subtitle.",
-        "The About section and Footer reflect the updated brand copy referencing Arpan Ghosh."
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Update the primary contact number to 6294577453 and add the alternative contact number 8617376874 in the Contact section, Footer, and any other location where contact details are displayed.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "My Contact number is 6294577453",
-          "Another Alternative Number is 8617376874"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Primary phone number 6294577453 is displayed in the Contact section and Footer.",
-        "Alternative phone number 8617376874 is displayed alongside the primary number in the Contact section and Footer.",
-        "Both numbers are clickable tel: links on mobile."
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Update the UPI payment ID to '6294577453@ybl' in the CheckoutModal payment step and anywhere else UPI payment details are shown.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "this is my UPI ID 6294577453@ybl for payment"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The CheckoutModal payment step displays the UPI ID '6294577453@ybl'.",
-        "No other/old UPI ID remains visible in the application."
+        "The OwnerPhoto component is fixed to the bottom-right corner of the screen on all viewport sizes.",
+        "The OwnerPhoto does not overlap the FloatingWhatsApp button — there is clear vertical separation between the two.",
+        "The circular owner photo, glow ring, and name label are fully visible and not clipped.",
+        "The widget remains in the bottom-right on mobile, tablet, and desktop screen sizes."
       ]
     }
   ],
   "constraints": [
-    "Do not alter any checkout flow logic, cart, wishlist, or order features.",
-    "Do not modify files under frontend/src/hooks/ or frontend/src/components/ui."
+    "Do not remove or modify the FloatingWhatsApp component.",
+    "Do not alter the owner photo image, glow ring style, or name label content."
   ],
   "nonGoals": [
-    "Adding new pages or sections.",
-    "Changing the visual theme or color palette.",
-    "Backend schema changes."
+    "Adding new sections or features to the page.",
+    "Changing the owner photo image.",
+    "Modifying backend logic."
   ],
   "imageRequirements": {
     "required": [],

@@ -2,7 +2,7 @@ import { Award, Users, Sparkles } from 'lucide-react';
 
 const stats = [
   { icon: Award, value: '100%', label: 'Handcrafted with Love' },
-  { icon: Users, value: '200+', label: 'Happy Customers' },
+  { icon: Users, value: '🌱', label: 'Growing Community of Happy Customers' },
   { icon: Sparkles, value: '✦', label: 'Glow Your Beautiful Moments' },
 ];
 
@@ -20,13 +20,13 @@ export default function About() {
               It Is My Dream Business
             </h2>
             <p className="font-body text-base text-muted-foreground leading-relaxed mb-5">
-              Handcrafted candles made with love by <strong className="text-foreground">Arpan Ghosh</strong> —
-              Melt &amp; Glow was born from a deep passion for handcrafted beauty and the
+              Handcrafted candles made with love by <strong className="text-foreground">Melt &amp; Glow</strong> —
+              born from a deep passion for handcrafted beauty and the
               warmth that a single candle can bring to any space. Every candle we create
               is a piece of that dream — made with love, care, and the finest ingredients.
             </p>
             <p className="font-body text-base text-muted-foreground leading-relaxed mb-8">
-              Based in Diamond Harbour, Falta, Arpan pours his heart into every product,
+              Based in Diamond Harbour, Falta, the <strong className="text-foreground">MG</strong> team pours their heart into every product,
               believing that the right candle can transform an ordinary moment into
               something truly magical. This is more than a business — it's a calling.
             </p>

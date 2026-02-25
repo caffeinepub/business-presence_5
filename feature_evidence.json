@@ -2,12 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-the-site-tagline-description-to-handcrafted-candles-made-with-love-by-arpan-ghosh-wherever-brand-copy-or-taglines-appear-hero-section-about-section-footer",
-      "featureTitle": "Update the site tagline/description to 'Handcrafted candles made with love by Arpan Ghosh' wherever brand copy or taglines appear (Hero section, About section, Footer).",
+      "featureId": "feature-move-the-ownerphoto-floating-widget-so-it-is-fixed-at-the-bottom-right-corner-of-the-viewport-it-must-not-overlap-or-conflict-with-the-floatingwhatsapp-button-place-it-directly-above-the-whatsapp-button-e-g-bottom-24-right-4-so-both-are-visible-and-separated-the-circular-photo-glow-ring-and-name-label-must-all-remain-intact",
+      "featureTitle": "Move the OwnerPhoto floating widget so it is fixed at the bottom-right corner of the viewport. It must not overlap or conflict with the FloatingWhatsApp button — place it directly above the WhatsApp button (e.g., bottom-24 right-4) so both are visible and separated. The circular photo, glow ring, and name label must all remain intact.",
       "files": [
-        "frontend/src/components/About.tsx",
-        "frontend/src/components/Footer.tsx",
-        "frontend/src/components/Hero.tsx"
+        "frontend/src/components/OwnerPhoto.tsx"
       ],
       "components": [
         "authorization@4.0.0",
@@ -21,49 +19,6 @@
       ],
       "testIds": [
         "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-primary-contact-number-to-6294577453-and-add-the-alternative-contact-number-8617376874-in-the-contact-section-footer-and-any-other-location-where-contact-details-are-displayed",
-      "featureTitle": "Update the primary contact number to 6294577453 and add the alternative contact number 8617376874 in the Contact section, Footer, and any other location where contact details are displayed.",
-      "files": [
-        "frontend/src/components/Contact.tsx",
-        "frontend/src/components/Footer.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "qr-code@1.0.0",
-        "camera@1.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-upi-payment-id-to-6294577453-ybl-in-the-checkoutmodal-payment-step-and-anywhere-else-upi-payment-details-are-shown",
-      "featureTitle": "Update the UPI payment ID to '6294577453@ybl' in the CheckoutModal payment step and anywhere else UPI payment details are shown.",
-      "files": [
-        "frontend/src/components/CheckoutModal.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "qr-code@1.0.0",
-        "camera@1.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
       ],
       "confidence": "high"
     }

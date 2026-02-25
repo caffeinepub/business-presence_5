@@ -67,7 +67,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
             onClick={onCtaClick}
             className="px-8 py-3.5 rounded-full bg-accent text-accent-foreground font-body font-semibold text-base hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
-            Order Now
+            Shop Now
           </button>
           <button
             onClick={() => {

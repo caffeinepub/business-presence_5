@@ -1,66 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update business details: tagline, contact numbers, and UPI payment ID",
+  "title": "Position OwnerPhoto widget at bottom-right corner",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Update the site tagline to 'Handcrafted candles made with love by Arpan Ghosh' in Hero, About, and Footer sections",
+      "summary": "Move the OwnerPhoto floating widget to the bottom-right corner with proper separation from the FloatingWhatsApp button",
       "acceptanceCriteria": [
-        "The phrase 'Handcrafted candles made with love by Arpan Ghosh' is visible in the Hero section tagline or subtitle.",
-        "The About section and Footer reflect the updated brand copy referencing Arpan Ghosh."
+        "The OwnerPhoto component is fixed to the bottom-right corner of the screen on all viewport sizes.",
+        "The OwnerPhoto does not overlap the FloatingWhatsApp button — there is clear vertical separation between the two.",
+        "The circular owner photo, glow ring, and name label are fully visible and not clipped.",
+        "The widget remains in the bottom-right on mobile, tablet, and desktop screen sizes."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Hero.tsx",
+          "path": "frontend/src/components/OwnerPhoto.tsx",
           "operation": "modify",
-          "description": "Update the tagline or subtitle text to display 'Handcrafted candles made with love by Arpan Ghosh' in place of the current brand description."
-        },
-        {
-          "path": "frontend/src/components/About.tsx",
-          "operation": "modify",
-          "description": "Update the brand story copy to include 'Handcrafted candles made with love by Arpan Ghosh' in the description text, ensuring it references Arpan Ghosh as the creator."
-        },
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Update the tagline text in the footer to display 'Handcrafted candles made with love by Arpan Ghosh'."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Update contact numbers to primary 6294577453 and alternative 8617376874 in Contact and Footer sections with clickable tel: links",
-      "acceptanceCriteria": [
-        "Primary phone number 6294577453 is displayed in the Contact section and Footer.",
-        "Alternative phone number 8617376874 is displayed alongside the primary number in the Contact section and Footer.",
-        "Both numbers are clickable tel: links on mobile."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Contact.tsx",
-          "operation": "modify",
-          "description": "Update the phone number display to show primary contact 6294577453 and alternative contact 8617376874. Wrap both numbers in clickable <a href='tel:...'> links for mobile compatibility."
-        },
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Update the owner contact details to display primary phone 6294577453 and alternative phone 8617376874. Ensure both are wrapped in <a href='tel:...'> anchor tags for mobile tap-to-call functionality."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Update UPI payment ID to '6294577453@ybl' in CheckoutModal payment step",
-      "acceptanceCriteria": [
-        "The CheckoutModal payment step displays the UPI ID '6294577453@ybl'.",
-        "No other/old UPI ID remains visible in the application."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/CheckoutModal.tsx",
-          "operation": "modify",
-          "description": "Update the payment step to display the UPI ID '6294577453@ybl' in place of any existing UPI payment identifier. Ensure no other UPI ID is displayed in the modal."
+          "description": "Update the positioning classes of the OwnerPhoto component to place it at the bottom-right corner using fixed positioning (e.g., bottom-24 right-4) to ensure vertical separation above the FloatingWhatsApp button. Verify that the circular photo container, glow ring animation, and name label remain fully visible and not clipped on all viewport sizes (mobile, tablet, desktop). Ensure the component uses the generated owner photo image at frontend/public/assets/generated/owner-photo.dim_120x120.png."
         }
       ]
     }
